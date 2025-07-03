@@ -1,0 +1,31 @@
+{
+    "model_id": "gpt-4o",
+    "model_source": "azure",
+    "objective": "the prospect discusses their business goals in the context of the purchasing process",
+    "data_dir": "./data/business_goals",
+    "num_few_shot_examples": [
+        0,
+        10,
+        25,
+        50,
+        75,
+        100
+    ],
+    "num_experiments": 5,
+    "batch_size": 10,
+    "output_dir": "./results/business_goals",
+    "use_wandb": true,
+    "override": false,
+    "mix_examples": false,
+    "sampling_method": "label_distribution",
+    "label_column": "label",
+    "text_column": "text",
+    "example_column": "text",
+    "label_map": {
+        "0": "Negative",
+        "1": "Positive"
+    },
+    "wandb_entity": "nlp",
+    "wandb_project": "b2b-classification-research",
+    "wandb_run": "experiment-business_goals-gpt4o"
+}
